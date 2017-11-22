@@ -10,5 +10,7 @@
 <body <?php body_class(); /* target different pages with CSS easily*/?>>
 
   <header class="site-header">
-    <h1><?php bloginfo('name'); ?></h1>
+    <h1><a href="<?php echo home_url(); /*adds link to homepage*/?>"><?php bloginfo('name'); ?></a></h1>
+    <h5><?php bloginfo('description'); ?></h5>
+  </header>
 
