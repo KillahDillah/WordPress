@@ -21,7 +21,7 @@
           );
 
           ?>
-        <?php wp_nav_menu(); /*adds all Pages as links and <li>*/ ?>
+        <?php wp_nav_menu($args); /*adds all Pages as links and <li> under <ul>*/ ?>
       </nav>
 
     </header>

@@ -8,7 +8,7 @@
       );
 
       ?>
-    <?php wp_nav_menu(); /*adds all Pages as links and <li>*/ ?>
+    <?php wp_nav_menu($args); /*adds all Pages as links and <li>*/ ?>
   </nav>
 
   <p><?php bloginfo('name'); /*name of site*/?> - &copy; <?php echo date('Y'); /*current date*/ ?></p>

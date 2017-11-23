@@ -25,11 +25,11 @@ a:hover {
   padding-right: 20px;
 }
 
-.post {
+article.post {
   border-bottom: 2px dotted #bbbbbb;
 }
 
-.post:last-of-type /*all posts have border except last post*/ {
+article.post:last-of-type /*all posts have border except last post*/ {
   border-bottom: none;
 }
 
@@ -44,4 +44,20 @@ a:hover {
 .site-footer {
   margin-top: 30px;
   border-top: 2px solid #999;
+}
+
+/* Navigaton Menus (header&footer)*/
+
+.site-nav ul {
+  margin: 0;
+  padding:0;
+}
+
+.site-nav ul:before, .site-nav ul:after {content: ""; display:'table'; }
+.site-nav ul:after {clear: both;}
+.site-nav ul {*zoom: 1;}
+
+.site-nav ul li {
+  list-style: none;
+  float: left;
 }
