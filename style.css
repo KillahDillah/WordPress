@@ -3,3 +3,37 @@ Theme Name: First
 Author: Leah
 */
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+a:link, a:visited {
+  color: #006ec3;
+  text-decoration-line: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+/* General Layout*/
+
+.container {
+  max-width: 920px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 2px solid #999;
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: 30px;
+  border-top: 2px solid #999;
+}

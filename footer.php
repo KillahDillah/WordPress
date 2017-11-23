@@ -4,6 +4,8 @@
 
 </footer>
 
+</div><!-- container --> 
+
 <?php wp_footer(); /*add plugins or widgets later, WP can add additional code if needed*/?>
 
 </body>
