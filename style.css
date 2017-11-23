@@ -25,6 +25,14 @@ a:hover {
   padding-right: 20px;
 }
 
+.post {
+  border-bottom: 2px dotted #bbbbbb;
+}
+
+.post:last-of-type /*all posts have border except last post*/ {
+  border-bottom: none;
+}
+
 /* Header */
 
 .site-header {

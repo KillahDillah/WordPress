@@ -14,5 +14,15 @@
     <header class="site-header">
       <h1><a href="<?php echo home_url(); /*adds link to homepage*/?>"><?php bloginfo('name'); ?></a></h1>
       <h5><?php bloginfo('description'); ?></h5>
+      
+      <nav class="site-nav">
+        <?php $args=array(
+            'theme_location' => 'primary'
+          );
+
+          ?>
+        <?php wp_nav_menu(); /*adds all Pages as links and <li>*/ ?>
+      </nav>
+
     </header>
 
