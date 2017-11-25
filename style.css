@@ -118,12 +118,31 @@ article.page h2 {
 
 /* Two Column Title Layout*/
 
-div.title-column {
+.title-column {
   width: 30%;
-  /*float: left;*/
+  float: left;
 }
 
-div.text-column {
+.text-column {
   width: 70%;
-  /*float: right;*/
+  float: right;
+}
+
+/* Info Box Styles
+*/
+
+.info-box {
+  width: 30%;
+  margin: 0 0 30px 30px;
+  float:right;
+  padding: 20px;
+  background-color: #EEE;
+}
+
+.info-box h4 {
+  margin-bottom: 6px;
+}
+
+.info-box p {
+  font-size: 85%;
 }

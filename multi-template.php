@@ -1,4 +1,4 @@
-<?php /*This powers ALL pages*/
+<?php /* Template Name: Multi */
 
 get_header(); 
 
@@ -7,6 +7,12 @@ if (have_posts()):
 
   <article class="post-page">
     <h2><?php the_title(); ?></h2>
+
+    <div class="info-box">
+      <h4>Disclaimer Title</h4>
+      <p>test</p>
+    </div>
+
     <?php the_content(); ?>
   </article>
 

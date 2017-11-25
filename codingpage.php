@@ -1,4 +1,4 @@
-<?php
+<?php /* Template Name: Coding */
 
 get_header();
 
@@ -17,8 +17,6 @@ if (have_posts()):
       </div>
 
     </div>
-
-    
     
   </article>
 

@@ -15,7 +15,11 @@
       <h1><a href="<?php echo home_url(); /*adds link to homepage*/?>"><?php bloginfo('name'); ?></a></h1>
       <h5><?php bloginfo('description'); ?><?php if (is_page(recipes/*page number/title*/)) { ?>
         - Yum!
-      <?php }?></h5>
+      <?php }?><?php if (is_page(coding)) { ?>
+       - All things code!
+      <?php } ?></h5>
+
+      
       
       <nav class="site-nav">
         <?php $args=array(
@@ -24,6 +28,9 @@
 
           ?>
         <?php wp_nav_menu($args); /*adds all Pages as links and <li> under <ul>*/ ?>
+
+      
+
       </nav>
 
     </header>
