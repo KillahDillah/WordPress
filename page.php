@@ -7,14 +7,21 @@ if (have_posts()):
 
   <article class="post-page">
 
-    <span class="parent-link"><a href="#"></a></span>
-     <?php 
-      $args=array (
-        'child_of' => get_top_ancestor_id(), 'title-li' => ' '
-      );
-    ?>
+    <?php if ( has_children() OR $post->post_parent>0) { ?>
 
-    <?php wp_list_pages($args/*function '$args' in head/footer do NOT carry over*/); ?>
+      <nav class="site-nav child-links clearfix">
+        <span class="parent-link"><a href="<?php echo get_the_permalink(get_top_ancestor_id()); ?>"><?php echo get_the_title(get_top_ancestor_id()); ?></a></span>
+        <ul>
+
+          <?php 
+            $args = array(
+              'child_of' => get_top_ancestor_id(), 'title_li' => ''
+            );
+          ?>
+          <?php wp_list_pages($args/*function '$args' in head/footer do NOT carry over*/); ?>
+        </ul>
+      </nav>
+    <?php } ?>
     <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
   </article>

@@ -29,6 +29,10 @@ article.post {
   border-bottom: 2px dotted #bbbbbb;
 }
 
+.post-page {
+  margin-top: 10px;
+}
+
 article.post:last-of-type /*all posts have border except last post*/ {
   border-bottom: none;
 }
@@ -82,7 +86,7 @@ article.post:last-of-type /*all posts have border except last post*/ {
 }
 
 .site-header nav ul li.current-menu-item a:link, 
-.site-header nav ul li.current-menu-item a:visited {
+.site-header nav ul li.current-menu-item a:visited, .site-header nav ul li.current-page-ancestor a:link, .site-header nav ul li.current-page-ancestor a:visited  {
   background-color: blue;
   color: white;
 }
@@ -120,12 +124,12 @@ article.page h2 {
 
 .title-column {
   width: 30%;
-  /*float: left;*/
+  float: left;
 }
 
 .text-column {
-  /*width: 70%;
-  float: right;*/
+ width: auto;
+ float: none;
 }
 
 /* Info Box Styles
@@ -134,7 +138,7 @@ article.page h2 {
 div.info-box {
   width: 30%;
   margin: 0 0 30px 30px;
-  /*float:right;*/
+  float:right;
   padding: 20px;
   background-color: #EEE;
 }
@@ -145,4 +149,38 @@ div.info-box {
 
 .info-box p {
   font-size: 85%;
+}
+
+/* Children links*/
+
+.child-links {
+  margin-bottom: 20px;
+  font-size: 80%;
+}
+
+.child-links li {
+  margin-right: 20px;
+}
+
+.parent-link {
+  margin-right: 20px;
+  float: left;
+  padding-right: 20px;
+  border-right: 1px solid #DDD;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.parent-link a:link, .parent-link a:visited {
+  color: #333;
+}
+
+.parent-link a:hover {
+  color: blue;
+}
+
+.child-links .current_page_item a:link, .child-links .current_page_item a:visited {
+  border-bottom: 1px solid #DDD;
+  color: #333;
+  cursor: default;
 }
