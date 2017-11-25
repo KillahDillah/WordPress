@@ -7,7 +7,15 @@ if (have_posts()):
 
   <article class="post-page">
 
-    <div class="colum-container clearfix">
+    <?php 
+      $args=array (
+        'child_of' => get_top_ancestor_id(), 'title-li' => ''
+      );
+    ?>
+
+    <?php wp_list_pages($args/*function '$args' in head/footer do NOT carry over*/); ?>
+
+    <div class="column-container clearfix">
 
       <div class="title-column">
         <h2><?php the_title(); ?></h2>

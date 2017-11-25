@@ -131,7 +131,7 @@ article.page h2 {
 /* Info Box Styles
 */
 
-.info-box {
+div.info-box {
   width: 30%;
   margin: 0 0 30px 30px;
   float:right;
