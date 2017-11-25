@@ -2,20 +2,30 @@
 
 get_header();
 
-if (have_posts()):
+if (have_posts()) :
   while (have_posts()) : the_post(); /* anything between here and ___, gets repeated for each post*/ ?>
 
   <article class="post-page">
 
+    <span class="parent-link"><a href="<?php echo get_the_permalink(get_top_ancestor_id); ?>"><?php echo get_the_title(get_top_ancestor_id); ?></a></span>
+
     <?php 
-      $args=array (
-        'child_of' => get_top_ancestor_id(), 'title-li' => ''
-      );
+
+      $args = array(
+        'child_of' => get_top_ancestor_id(), 
+        'title_li' => ''
+    );
+
     ?>
 
     <?php wp_list_pages($args/*function '$args' in head/footer do NOT carry over*/); ?>
 
     <div class="column-container clearfix">
+
+      <div class="info-box">
+      <h4>Disclaimer Title</h4>
+      <p>test</p>
+    </div>
 
       <div class="title-column">
         <h2><?php the_title(); ?></h2>
