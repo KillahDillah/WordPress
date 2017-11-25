@@ -13,7 +13,9 @@
 
     <header class="site-header">
       <h1><a href="<?php echo home_url(); /*adds link to homepage*/?>"><?php bloginfo('name'); ?></a></h1>
-      <h5><?php bloginfo('description'); ?></h5>
+      <h5><?php bloginfo('description'); ?><?php if (is_page(recipes/*page number/title*/)) { ?>
+        - Yum!
+      <?php }?></h5>
       
       <nav class="site-nav">
         <?php $args=array(
