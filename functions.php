@@ -28,11 +28,11 @@ function get_top_ancestor_id(){
 } 
 // return most recent ancestor page relative to the child page. if viewing parent page, show itself, if viewing child, show parent.
 
-// Does page have children?//
+// Does page have children?
 
 function has_children() {
   global $post;
 
-  $pages = get_pages('child_of=' . $post->ID);
-  return count($pages);
+  $pages = get_pages('child_of=' . $post->ID); // '.' means current page
+  return count($pages); // return the number of pages, which would be zero - shows nothing
 }
